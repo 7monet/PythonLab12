@@ -1,0 +1,18 @@
+{% extends "forma.html" %}
+ 
+{% block content %}
+	<h1>Dodaj studenta</h1>
+
+	<form action = "{{url_for('addrec')}}" method = "POST">
+		 Imię i nazwisko<br>
+		 <input type = "text" name = "imienazwisko" /></br>
+
+		 Podaj Numer pracownika<br>
+		 <input type = "text" name = "nrpracownika" /><br>
+
+		 Adres<br>
+		 <textarea name = "adres" ></textarea><br>
+		 
+		 <input type = "submit" value = "Zapisz" /><br>
+	 </form>
+{% endblock %}

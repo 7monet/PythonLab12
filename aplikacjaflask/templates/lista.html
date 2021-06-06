@@ -1,0 +1,22 @@
+{% extends "forma.html" %}
+
+{% block content %}
+	<h1>Lista Pracownikow</h1>
+
+	<table border = 2>
+		<thead>
+			<td>Imię i nazwisko</td>
+			<td>Numer pracownika</td>
+			<td>Adres</td>
+		</thead>
+
+		{% for rekord in rekordy %}
+			<tr>
+				<td>{{rekord["imienazwisko"]}}</td>
+				<td>{{rekord["nrpracownika"]}}</td>
+				<td>{{rekord["adres"]}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+{% endblock %}
